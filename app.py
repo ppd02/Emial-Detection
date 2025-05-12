@@ -1,12 +1,12 @@
 import streamlit as st
-import pickle
+import joblib
 
 # Load the saved model and vectorizer
-with open('spam_model.pkl', 'rb') as f:
-    model = pickle.load(f)
+with open('spam_model.joblib', 'rb') as f:
+    model = joblib.load(f)
 
-with open('tfidf_vectorizer.pkl', 'rb') as f:
-    vectorizer = pickle.load(f)
+with open('tfidf_vectorizer.joblib', 'rb') as f:
+    vectorizer = joblib.load(f)
 
 # Title and Description
 st.title("📧 Email Spam Classifier")
